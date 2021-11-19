@@ -11,6 +11,14 @@
 - Adds support for font feature settings (#520).
 - Adds pixel-perfect box-drawing for U+E0B4, U+E0B6, U+E0BC, U+E0BE (some [Powerline extended codepoints](https://github.com/ryanoasis/powerline-extra-symbols#glyphs)).
 
+#### Grid-PR induced changes
+
+- Improved VT backend performance (#342).
+- Improved text selection behaviour.
+- Adds `mouse_block_selection_modifier` configuration key.
+- Adds configuration option `profiles.*.copy_last_mark_range_offset` (default `0`) to adjust where to
+  start looking upwards for the `CopyPreviousMarkRange` action.
+
 ### 0.2.2 (2021-11-19)
 
 - Fixes input mapping containing `Control` modifier.
