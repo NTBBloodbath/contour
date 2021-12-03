@@ -23,7 +23,6 @@
 
 #include <unicode/convert.h>
 
-#include <gsl/gsl_assert>
 #include <gsl/span>
 #include <gsl/span_ext>
 

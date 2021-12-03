@@ -16,7 +16,6 @@
 #include <terminal/primitives.h>
 #include <terminal/GraphicsAttributes.h>
 
-#include <gsl/gsl_assert>
 #include <gsl/span>
 #include <gsl/span_ext>
 
