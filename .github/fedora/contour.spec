@@ -47,6 +47,7 @@ mkdir -p %{buildroot}%{_datadir}/applications
 mkdir -p %{buildroot}%{_datadir}/terminfo
 mkdir -p %{buildroot}%{_datadir}/pixmaps
 mkdir -p %{buildroot}%{_datadir}/contour
+tree %{buildroot}
 # Move /usr/local files to /usr to follow build standards
 mv %{buildroot}/usr/local/bin/%{name} %{buildroot}%{_bindir}/%{name}
 for _dir in $(ls "%{buildroot}/usr/local/share"); do

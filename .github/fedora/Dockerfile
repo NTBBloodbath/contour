@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install Git and RPM development tools
 RUN dnf install -y \
-        git gcc rpm-build rpm-devel make coreutils diffutils patch rpmdevtools
+        git gcc rpm-build rpm-devel make coreutils diffutils patch rpmdevtools desktop-file-utils tree
 
 # Install contour dependencies
 RUN dnf install -y \
