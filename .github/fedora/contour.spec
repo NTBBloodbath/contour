@@ -47,19 +47,18 @@ mkdir -p %{buildroot}%{_datadir}/applications
 mkdir -p %{buildroot}%{_datadir}/terminfo
 mkdir -p %{buildroot}%{_datadir}/pixmaps
 mkdir -p %{buildroot}%{_datadir}/contour
-tree %{buildroot}
-# Move /usr/local files to /usr to follow build standards
-mv %{buildroot}/usr/local/bin/%{name} %{buildroot}%{_bindir}/%{name}
-for _dir in $(ls "%{buildroot}/usr/local/share"); do
+# Move /usr/opt files to /usr to follow build standards
+mv %{buildroot}/usr/opt/contour/bin/%{name} %{buildroot}%{_bindir}/%{name}
+for _dir in $(ls "%{buildroot}/usr/opt/contour/share"); do
     # Moved directories:
     # - applications
     # - terminfo
     # - pixmaps
     # - contour
-    mv "%{buildroot}/usr/local/share/$_dir" "%{buildroot}%{_datadir}"
+    mv "%{buildroot}/usr/opt/contour/share/$_dir" "%{buildroot}%{_datadir}"
 done
-# Remove non-needed /usr/local directory
-rm -rf %{buildroot}/usr/local
+# Remove non-needed /usr/opt directory
+rm -rf %{buildroot}/usr/opt
 # verify desktop file
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
