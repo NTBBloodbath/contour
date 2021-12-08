@@ -33,6 +33,7 @@ It is aiming for power users with a modern feature mindset.
 
 %build
 BUILD_TYPE=Release ./autogen.sh
+ls build/
 %ninja_build
 
 
