@@ -39,6 +39,8 @@ cd target/Release
 
 
 %install
+pwd
+ls ./**
 %ninja_install
 # Create needed directories
 mkdir -p %{buildroot}%{_bindir}
