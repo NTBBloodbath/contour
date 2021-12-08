@@ -16,6 +16,7 @@ BuildRequires:  extra-cmake-modules
 BuildRequires:  ninja-build
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconf
+BuildRequires:  fontconfig-devel
 BuildRequires:  freetype-devel
 BuildRequires:  harfbuzz-devel
 BuildRequires:  qt5-qtbase-devel
@@ -32,8 +33,8 @@ It is aiming for power users with a modern feature mindset.
 
 
 %build
-BUILD_TYPE=Release ./autogen.sh
-ls ./**
+./autogen.sh Release
+cd target/Release
 %ninja_build
 
 
@@ -72,5 +73,5 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 
 %changelog
-* Sun Dec 05 2021 NTBBloodbath <bloodbathalchemist@protonmail.com> 0.3.0-1
+* Sun Dec 07 2021 NTBBloodbath <bloodbathalchemist@protonmail.com> 0.3.0-1
 - Initial RPM package
