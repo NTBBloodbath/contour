@@ -9,7 +9,7 @@ RUN dnf install -y \
 # Install contour dependencies
 RUN dnf install -y \
         cmake extra-cmake-modules ninja-build gcc-c++ pkgconf freetype-devel harfbuzz-devel \
-        qt5-qtbase-devel qt5-qtbase-gui kf5-kwindowsystem-devel fontconfig
+        qt5-qtbase-devel qt5-qtbase-gui kf5-kwindowsystem-devel fontconfig-devel
 
 RUN useradd -d /app builder
 RUN echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
