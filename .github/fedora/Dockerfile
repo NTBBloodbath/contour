@@ -29,4 +29,4 @@ RUN git clone https://github.com/NTBBloodbath/contour.git \
 
 # Build contour
 RUN cd /app/rpmbuild \
-    && rpmbuild --define "_topdir $(pwd)" -v -bb SPECS/contour.spec
+    && rpmbuild --define "_topdir $(pwd)" -v -ba SPECS/contour.spec
