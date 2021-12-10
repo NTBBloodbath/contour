@@ -1,4 +1,7 @@
-FROM fedora:latest
+FROM fedora:latest AS base
+
+ARG VERSION_STRING
+ARG CONTOUR_VERSION=$VERSION_STRING
 
 WORKDIR /app
 
