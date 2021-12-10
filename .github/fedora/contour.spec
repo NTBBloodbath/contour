@@ -7,7 +7,7 @@
 %global debug_package %{nil}
 
 # Get contour version
-%_version %{getenv:CONTOUR_VERSION}
+%{!?_version: %define _version %{getenv:CONTOUR_VERSION} }
 
 Name:           contour
 Version:        %{_version}
