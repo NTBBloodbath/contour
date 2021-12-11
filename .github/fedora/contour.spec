@@ -4,7 +4,7 @@
 
 # Shut up rpmbuild complaining about this file when finishing the build
 # error: Empty %files file /app/rpmbuild/BUILD/contour-0.3.0/debugsourcefiles.list
-%global debug_package %{nil}
+#%%global debug_package %{nil}
 
 # Get contour version
 %{!?_version: %define _version %{getenv:CONTOUR_VERSION} }
@@ -38,6 +38,7 @@ It is aiming for power users with a modern feature mindset.
 %prep
 %setup -q -n %{name}-%{version}
 
+%debug_package
 
 %build
 ./autogen.sh Release

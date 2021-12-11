@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Install Git and RPM development tools
 RUN dnf install -y \
-        git gcc rpm-build rpm-devel make coreutils diffutils patch rpmdevtools desktop-file-utils
+        git gcc rpm-build rpm-devel make coreutils diffutils patch rpmdevtools desktop-file-utils tree
 
 # Install contour dependencies
 RUN dnf install -y \
@@ -31,4 +31,5 @@ RUN git clone https://github.com/NTBBloodbath/contour.git \
 
 # Build contour
 RUN cd /app/rpmbuild \
-    && rpmbuild --define "_topdir $(pwd)" -v -ba SPECS/contour.spec
+    && rpmbuild --define "_topdir $(pwd)" -v -ba SPECS/contour.spec \
+    && tree /app/rpmbuild
