@@ -1,14 +1,21 @@
 ### 0.3.0 (unreleased)
 
+**Important: It is recommended to also use the latest `contour` termcap file if you are already using one
+from a previous release.**
+
 - Fixes Sixel image rendering when scrolling is needed and ANSI cursor is not on left margin.
 - Fixes Qt-related CLI options that that were largely ignored.
 - Fixes crash caused by VT sequence PM and SOS (#513).
+- Fixes parsing VT sequence RGB color parsing for cell decoratioins (e.g. underline).
+- Fixes double-underline to not look like a very thick line on small font sizes.
+- Applies antialiasing to curly underline.
 - Changes `contour` exit code to reflect the shell's exit code of the last closed window.
 - Improves text cursor rendering and extends cursor configuration accordingly (#526).
+- Improves visual appearance of dotted underline SGR.
 - Adds CLI option `terminal early-exit-threshold SECS` (defaulting to 6) to only report and wait if the process did exit below this threshold seconds.
 - Adds CLI option `terminal dump-state-at-exit` to auto-dump internal state at exit.
 - Adds support for CoreText for matching font descriptions and font fallback (#479).
-- Adds support for font feature settings (#520).
+- Adds support for font feature settings. This is currently only implemented for `openshaper`, not yet for `dwrite` (#520).
 - Adds pixel-perfect box-drawing for U+E0B4, U+E0B6, U+E0BC, U+E0BE (some [Powerline extended codepoints](https://github.com/ryanoasis/powerline-extra-symbols#glyphs)).
 
 ### 0.2.2 (2021-11-19)
